@@ -365,7 +365,7 @@ class RovsingMenu(unittest.TestCase):
         read_more.click()
 
         # apply position
-        apply_postion = self.driver.find_element_by_xpath("//div[contains(text(),'apply now')]")
+        apply_postion = self.driver.find_element_by_xpath("//div[@class='apply']")
         apply_postion.click()
         self.driver.implicitly_wait(5)
 
