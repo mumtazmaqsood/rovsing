@@ -6,7 +6,7 @@ from selenium.webdriver import ActionChains   #for hover on menue
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from time import sleep
-
+import pytest
 
 
 class RovsingMenu(unittest.TestCase):
@@ -14,7 +14,7 @@ class RovsingMenu(unittest.TestCase):
     # code in setUpClass run once before test cases run
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Chrome(executable_path='..\drivers\chromedriver.exe')
+        cls.driver = webdriver.Chrome()
         cls.driver.implicitly_wait(10)
         cls.driver.maximize_window()
         cls.driver.get('http://rovsing.dk/')
